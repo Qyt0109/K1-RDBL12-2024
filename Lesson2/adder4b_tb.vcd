@@ -1,0 +1,101 @@
+$date
+	Fri Oct 25 00:29:29 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module adder4b_tb $end
+$var wire 4 ! s [3:0] $end
+$var wire 1 " o $end
+$var reg 4 # a [3:0] $end
+$var reg 4 $ b [3:0] $end
+$scope module adder4b_dut $end
+$var wire 4 % a [3:0] $end
+$var wire 4 & b [3:0] $end
+$var wire 4 ' s [3:0] $end
+$var wire 1 " o $end
+$upscope $end
+$scope task add $end
+$upscope $end
+$scope task test $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b101 '
+b1 &
+b100 %
+b1 $
+b100 #
+0"
+b101 !
+$end
+#1
+b1100 !
+b1100 '
+b11 $
+b11 &
+b1001 #
+b1001 %
+#2
+b1010 !
+b1010 '
+1"
+b1101 $
+b1101 &
+b1101 #
+b1101 %
+#3
+0"
+b111 !
+b111 '
+b10 $
+b10 &
+b101 #
+b101 %
+#4
+b1110 !
+b1110 '
+b1101 $
+b1101 &
+b1 #
+b1 %
+#5
+b11 !
+b11 '
+1"
+b110 #
+b110 %
+#6
+b1001 !
+b1001 '
+b1100 $
+b1100 &
+b1101 #
+b1101 %
+#7
+0"
+b1111 !
+b1111 '
+b110 $
+b110 &
+b1001 #
+b1001 %
+#8
+b1010 $
+b1010 &
+b101 #
+b101 %
+#9
+b1100 !
+b1100 '
+b111 $
+b111 &
+#10
