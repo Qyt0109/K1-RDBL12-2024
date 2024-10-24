@@ -19,6 +19,8 @@
 
 - **File**: [event_counter_tb.sv](./tb/event_counter_tb.sv)
 
+#### Waveform:
+
 ![](./event_counter_tb.png)
 
 Whenever the _event_triggered_ signal occurs, the counter value _count_ is incremented by one. However, when the _hold_ signal is high, the counter stops incrementing, even if _event_triggered_ occurs. At the end of the waveform, we can observe the reset signal _rst_, which resets the counter to zero.
@@ -43,7 +45,7 @@ Whenever the _event_triggered_ signal occurs, the counter value _count_ is incre
 
 - **File**: [adder4b_tb.sv](./tb/adder4b_tb.sv)
 
-Output:
+#### Output:
 
 ```
  4 +  1 =  5  
@@ -58,7 +60,7 @@ Output:
  5 +  7 = 12  
 ```
 
-Waveform:
+#### Waveform:
 
 ![](./adder_tb.png)
 
