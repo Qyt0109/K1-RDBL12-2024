@@ -1,5 +1,29 @@
 # Homework Report - Lesson 2
 
+# 3. Event counter
+
+- **File**: [event_counter.sv](./rtl/event_counter.sv)
+## Diagram
+
+![Diagram](event_counter.svg "Diagram")
+## Ports
+
+| Port name       | Direction | Type      | Description                                          |
+| --------------- | --------- | --------- | ---------------------------------------------------- |
+| event_triggered | input     |           | Event occurred, increment the count                  |
+| rst             | input     |           | Reset the count to zero                              |
+| hold            | input     |           | Hold the current count even if an event is triggered |
+| count           | output    | reg [7:0] | Count the number of events that have occurred        |
+
+## Test
+
+- **File**: [event_counter_tb.sv](./tb/event_counter_tb.sv)
+
+![](./event_counter_tb.png)
+
+Whenever the _event_triggered_ signal occurs, the counter value _count_ is incremented by one. However, when the _hold_ signal is high, the counter stops incrementing, even if _event_triggered_ occurs. At the end of the waveform, we can observe the reset signal _rst_, which resets the counter to zero.
+
+
 # 4. Adder 4 bit with overflow bit check
 
 - **File**: [adder4b.sv](./rtl/adder4b.sv)
