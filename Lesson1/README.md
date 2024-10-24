@@ -1,4 +1,4 @@
-# Homework report for Day 1
+# Homework report for Lesson 1
 
 ## Design Asyn Up/Down counters
 
