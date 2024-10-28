@@ -1,0 +1,122 @@
+$date
+	Mon Oct 28 10:11:15 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module up_dw_cnt_tb $end
+$var wire 4 ! cnt [3:0] $end
+$var parameter 32 " CLK_PERIOD $end
+$var parameter 32 # CNT_WIDTH $end
+$var reg 1 $ clk $end
+$var reg 1 % en $end
+$var reg 1 & rst $end
+$var reg 1 ' up_dw $end
+$scope module up_dw_cnt_dut $end
+$var wire 1 $ clk $end
+$var wire 1 % en $end
+$var wire 1 & rst $end
+$var wire 1 ' up_dw $end
+$var parameter 32 ( CNT_WIDTH $end
+$var reg 4 ) cnt [3:0] $end
+$upscope $end
+$scope task nopclk $end
+$upscope $end
+$scope task reset $end
+$upscope $end
+$scope task up_dw_test $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 (
+b100 #
+b1010 "
+$end
+#0
+$dumpvars
+b0 )
+0'
+1&
+0%
+0$
+b0 !
+$end
+#5000
+1$
+#10000
+0&
+0$
+#15000
+1$
+#20000
+0$
+#25000
+1$
+#30000
+1'
+1%
+0$
+#35000
+b1 !
+b1 )
+1$
+#40000
+0$
+#45000
+b10 !
+b10 )
+1$
+#50000
+0$
+#55000
+b11 !
+b11 )
+1$
+#60000
+0$
+#65000
+b100 !
+b100 )
+1$
+#70000
+0$
+#75000
+b101 !
+b101 )
+1$
+#80000
+0'
+1%
+0$
+#85000
+b100 !
+b100 )
+1$
+#90000
+0$
+#95000
+b11 !
+b11 )
+1$
+#100000
+0$
+#105000
+b10 !
+b10 )
+1$
+#110000
+0%
+0$
+#115000
+1$
+#120000
+0$
+#125000
+1$
+#130000
+0$

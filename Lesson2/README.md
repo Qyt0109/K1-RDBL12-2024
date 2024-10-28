@@ -1,3 +1,55 @@
+# Labwork Report - Lesson 2
+
+# 1. D flipflop
+
+- **File**: [dff.sv](./rtl/dff.sv)
+## Diagram
+
+![Diagram](./doc/dff.svg "Diagram")
+## Ports
+
+| Port name | Direction | Type | Description                                        |
+| --------- | --------- | ---- | -------------------------------------------------- |
+| clk       | input     |      | Clock signal                                       |
+| d         | input     |      | Data to be stored on positive edge triggered clock |
+| q         | output    |      | Current state of the D flip flop                   |
+
+# 2, 3. Up/Down counter (4 bit)
+
+- **File**: [up_dw_cnt.sv](./rtl/up_dw_cnt.sv)
+## Diagram
+
+![Diagram](./doc/up_dw_cnt.svg "Diagram")
+## Generics
+
+| Generic name | Type | Value | Description              |
+| ------------ | ---- | ----- | ------------------------ |
+| CNT_WIDTH    |      | 4     | Bit width of the counter |
+## Ports
+
+| Port name | Direction | Type            | Description                    |
+| --------- | --------- | --------------- | ------------------------------ |
+| clk       | input     |                 | Clock signal                   |
+| rst       | input     |                 | Reset the counter              |
+| en        | input     |                 | enable counter                 |
+| up_dw     | input     |                 | Up/Down (1 for Up, 0 for Down) |
+| cnt       | output    | [CNT_WIDTH-1:0] | Current count value            |
+
+
+## Test
+
+- **File**: [up_dw_cnt_tb.sv](./tb/up_dw_cnt_tb.sv)
+
+#### Waveform
+
+![](./doc/up_dw_cnt.png)
+
+The testbench enabled the Up/Down counter module to count up 5 times, then down 3 times, before finally disabling it. The behavior confirmed that the module works as expected.
+
+---
+---
+---
+
 # Homework Report - Lesson 2
 
 # 3. Event counter
@@ -5,7 +57,7 @@
 - **File**: [event_counter.sv](./rtl/event_counter.sv)
 ## Diagram
 
-![Diagram](event_counter.svg "Diagram")
+![Diagram](./doc/event_counter.svg "Diagram")
 ## Ports
 
 | Port name       | Direction | Type      | Description                                          |
@@ -31,7 +83,7 @@ Whenever the _event_triggered_ signal occurs, the counter value _count_ is incre
 - **File**: [adder4b.sv](./rtl/adder4b.sv)
 ## Diagram
 
-![Diagram](adder4b.svg "Diagram")
+![Diagram](./doc/adder4b.svg "Diagram")
 ## Ports
 
 | Port name | Direction | Type  | Description                 |
