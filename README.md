@@ -8,4 +8,5 @@ Labwork, homework for Digital IC Design course
 
 ## Lesson 2: Verilog basic
 
-[Report here](./Lesson2/README.md)
+- Labwork: [Report here](./Lesson2/README.md)
+- Homework: [Report here](./Lesson2/HOMEWORK.md)
