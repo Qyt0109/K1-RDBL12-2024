@@ -1,48 +1,50 @@
-`timescale 1ns / 1ps
-
-module up_dw_cnt_tb;
+module shift_reg_tb;
 
   // Parameters
   localparam CLK_PERIOD = 10;
-  localparam CNT_WIDTH = 4;
+  localparam DEPTH = 4;
 
   // Ports
-  reg                  clk = 0;
-  reg                  rst = 0;
-  reg                  en = 0;
-  reg                  up_dw = 0;
-  wire [CNT_WIDTH-1:0] cnt;
+  reg clk = 0;
+  reg rst = 0;
+  reg en = 0;
+  reg d = 0;
+  wire [DEPTH-1:0] q;
 
-  up_dw_cnt #(
-      .CNT_WIDTH(CNT_WIDTH)
-  ) up_dw_cnt_dut (
-      .clk  (clk),
-      .rst  (rst),
-      .en   (en),
-      .up_dw(up_dw),
-      .cnt  (cnt)
+  shift_reg #(
+      .DEPTH(DEPTH)
+  ) shift_reg_dut (
+      .clk(clk),
+      .rst(rst),
+      .en (en),
+      .d  (d),
+      .q  (q)
   );
 
   initial begin
     begin
-      $dumpfile("up_dw_cnt_tb.vcd");
+      $dumpfile("shift_reg_tb.vcd");
       $dumpvars;
       reset(1);
       nopclk(2);
-      up_dw_test(1, 5);
-      up_dw_test(0, 3);
+      test($urandom, 10);
       nopclk(2);
       $finish;
     end
   end
 
-  task automatic up_dw_test;
-    input i_up_dw;
+  task automatic test;
+    input integer seq;
     input integer n;
+    integer seq_idx;
     begin
+      seq_idx = 0;
       en = 1;
-      up_dw = i_up_dw;
-      repeat (n) @(negedge clk);
+      repeat (n) begin
+        d = seq[seq_idx];
+        @(negedge clk);
+        seq_idx = seq_idx + 1;
+      end
       en = 0;
     end
   endtask  //automatic

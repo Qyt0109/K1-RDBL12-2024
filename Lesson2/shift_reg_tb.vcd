@@ -1,0 +1,133 @@
+$date
+	Mon Oct 28 10:46:17 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module shift_reg_tb $end
+$var wire 4 ! q [3:0] $end
+$var parameter 32 " CLK_PERIOD $end
+$var parameter 32 # DEPTH $end
+$var reg 1 $ clk $end
+$var reg 1 % d $end
+$var reg 1 & en $end
+$var reg 1 ' rst $end
+$scope module shift_reg_dut $end
+$var wire 1 $ clk $end
+$var wire 1 % d $end
+$var wire 1 & en $end
+$var wire 1 ' rst $end
+$var parameter 32 ( DEPTH $end
+$var reg 4 ) q [3:0] $end
+$upscope $end
+$scope task nopclk $end
+$upscope $end
+$scope task reset $end
+$upscope $end
+$scope task test $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 (
+b100 #
+b1010 "
+$end
+#0
+$dumpvars
+b0 )
+1'
+0&
+0%
+0$
+b0 !
+$end
+#5
+1$
+#10
+0'
+0$
+#15
+1$
+#20
+0$
+#25
+1$
+#30
+1&
+0$
+#35
+1$
+#40
+0$
+#45
+1$
+#50
+1%
+0$
+#55
+b1000 !
+b1000 )
+1$
+#60
+0%
+0$
+#65
+b100 !
+b100 )
+1$
+#70
+0$
+#75
+b10 !
+b10 )
+1$
+#80
+1%
+0$
+#85
+b1001 !
+b1001 )
+1$
+#90
+0%
+0$
+#95
+b100 !
+b100 )
+1$
+#100
+0$
+#105
+b10 !
+b10 )
+1$
+#110
+1%
+0$
+#115
+b1001 !
+b1001 )
+1$
+#120
+0%
+0$
+#125
+b100 !
+b100 )
+1$
+#130
+0&
+0$
+#135
+1$
+#140
+0$
+#145
+1$
+#150
+0$

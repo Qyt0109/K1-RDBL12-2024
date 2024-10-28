@@ -14,7 +14,7 @@
 | d         | input     |      | Data to be stored on positive edge triggered clock |
 | q         | output    |      | Current state of the D flip flop                   |
 
-# 2, 3. Up/Down counter (4 bit)
+# 2, 3, 4. Up/Down counter (4 bit)
 
 - **File**: [up_dw_cnt.sv](./rtl/up_dw_cnt.sv)
 ## Diagram
@@ -45,6 +45,31 @@
 ![](./doc/up_dw_cnt.png)
 
 The testbench enabled the Up/Down counter module to count up 5 times, then down 3 times, before finally disabling it. The behavior confirmed that the module works as expected.
+
+# 5. Shift register
+
+- **File**: [shift_reg.sv](./rtl/shift_reg.sv)
+## Diagram
+
+![Diagram](./doc/shift_reg.svg "Diagram")
+## Generics
+
+| Generic name | Type | Value | Description                 |
+| ------------ | ---- | ----- | --------------------------- |
+| DEPTH        |      | 4     | Depth of the shift register |
+## Ports
+
+| Port name | Direction | Type        | Description                                           |
+| --------- | --------- | ----------- | ----------------------------------------------------- |
+| clk       | input     |             | Clock signal to trigger data shift on rising edge     |
+| rst       | input     |             | Reset signal to initialize the register to 0          |
+| en        | input     |             | Enable signal to allow shifting when high             |
+| d         | input     |             | Data input for the shift register                     |
+| q         | output    | [DEPTH-1:0] | Output of the shift register holding the shifted data |
+
+![](./doc/shift_reg.png)
+
+The testbench enables the shift register module to load a random bit sequence (_0010010010_). The state of the shift register, _q_, follows the sequence, with each bit shifting in one by one at every clock edge until the enable signal, _en_, goes low, at which point the shifting is disabled.
 
 ---
 ---
