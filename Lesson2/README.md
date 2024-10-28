@@ -1,20 +1,27 @@
 # Labwork Report - Lesson 2
 
-# 1. D flipflop
+# Lab 1 & 6. D flipflop
 
 - **File**: [dff.sv](./rtl/dff.sv)
 ## Diagram
 
 ![Diagram](./doc/dff.svg "Diagram")
+
+## Generics
+
+| Generic name | Type | Value | Description |
+| ------------ | ---- | ----- | ----------- |
+| DATA_WIDTH   |      | 1     |             |
+
 ## Ports
 
-| Port name | Direction | Type | Description                                        |
-| --------- | --------- | ---- | -------------------------------------------------- |
-| clk       | input     |      | Clock signal                                       |
-| d         | input     |      | Data to be stored on positive edge triggered clock |
-| q         | output    |      | Current state of the D flip flop                   |
+| Port name | Direction | Type             | Description                                        |
+| --------- | --------- | ---------------- | -------------------------------------------------- |
+| clk       | input     |                  | Clock signal                                       |
+| d         | input     | [DATA_WIDTH-1:0] | Data to be stored on positive edge triggered clock |
+| q         | output    | [DATA_WIDTH-1:0] | Current state of the D flip flop                   |
 
-# 2, 3, 4. Up/Down counter (4 bit)
+# Lab 2, 3, and 4. Up/Down counter (4 bit)
 
 - **File**: [up_dw_cnt.sv](./rtl/up_dw_cnt.sv)
 ## Diagram
@@ -46,7 +53,7 @@
 
 The testbench enabled the Up/Down counter module to count up 5 times, then down 3 times, before finally disabling it. The behavior confirmed that the module works as expected.
 
-# 5. Shift register
+# Lab 5. Shift register
 
 - **File**: [shift_reg.sv](./rtl/shift_reg.sv)
 ## Diagram
