@@ -105,7 +105,7 @@ The testbench enables the shift register module to load a random bit sequence (_
 
 #### Waveform:
 
-![](./event_counter_tb.png)
+![](./doc/event_counter_tb.png)
 
 Whenever the _event_triggered_ signal occurs, the counter value _count_ is incremented by one. However, when the _hold_ signal is high, the counter stops incrementing, even if _event_triggered_ occurs. At the end of the waveform, we can observe the reset signal _rst_, which resets the counter to zero.
 
@@ -146,6 +146,6 @@ Whenever the _event_triggered_ signal occurs, the counter value _count_ is incre
 
 #### Waveform:
 
-![](./adder_tb.png)
+![](./doc/adder_tb.png)
 
 The testbench was run with 10 randomized values for each of the _a_ and _b_ inputs. The sum _s = a + b_ and the overflow bit _o_ worked as expected.
